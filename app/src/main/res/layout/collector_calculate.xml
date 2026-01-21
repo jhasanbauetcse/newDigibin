@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".Collector_calculate">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/softgreen"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/imageViewHeaderBackground"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/box_green"
+            android:scaleType="fitXY"
+            android:importantForAccessibility="no"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewHeaderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waste List"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHeaderBackground"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewHeaderBackground"
+            app:layout_constraintStart_toStartOf="@+id/imageViewHeaderBackground"
+            app:layout_constraintTop_toTopOf="@+id/imageViewHeaderBackground" />
+
+        <ImageView
+            android:id="@+id/imageViewPaperRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHeaderBackground"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewPaperIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/paper"
+            android:contentDescription="Paper waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPaperInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewPaperInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Paper\n(Base Rate: 15 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPaperIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPaperPricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextPaperPricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPaperWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPaperRowBg" />
+
+        <EditText
+            android:id="@+id/editTextPaperWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPaperRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPaperRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewPlasticRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPaperRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewPlasticIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/plastic"
+            android:contentDescription="Plastic waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPlasticInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewPlasticInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Plastic\n(Base Rate: 12 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewPlasticIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPlasticPricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextPlasticPricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextPlasticWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlasticRowBg" />
+
+        <EditText
+            android:id="@+id/editTextPlasticWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewPlasticRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewPlasticRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewMetalsRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewPlasticRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewMetalsIcon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/metals"
+            android:contentDescription="Metals waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewMetalsInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewMetalsInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Metals\n(Base Rate: 80 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMetalsIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextMetalsPricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextMetalsPricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextMetalsWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMetalsRowBg" />
+
+        <EditText
+            android:id="@+id/editTextMetalsWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewMetalsRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMetalsRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewMotorRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMetalsRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewMotorIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/motor"
+            android:contentDescription="Motor waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewMotorInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewMotorInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Motor\n(Base Rate: 90 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMotorIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextMotorPricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextMotorPricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextMotorWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMotorRowBg" />
+
+        <EditText
+            android:id="@+id/editTextMotorWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewMotorRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMotorRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewEWasteRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMotorRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewEWasteIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/e_waste"
+            android:contentDescription="E-waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewEWasteInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewEWasteInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="E-Waste\n(Base Rate: 100 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewEWasteIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextEWastePricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextEWastePricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextEWasteWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEWasteRowBg" />
+
+        <EditText
+            android:id="@+id/editTextEWasteWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewEWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewEWasteRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewOtherWasteRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewEWasteRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewOtherWasteIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/otherwaste"
+            android:contentDescription="Other waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewOtherWasteInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewOtherWasteInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Other Waste\n(Base Rate: 0 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOtherWasteIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextOtherWastePricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextOtherWastePricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextOtherWasteWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOtherWasteRowBg" />
+
+        <EditText
+            android:id="@+id/editTextOtherWasteWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewOtherWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOtherWasteRowBg" />
+
+        <ImageView
+            android:id="@+id/imageViewOrganicWasteRowBg"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:importantForAccessibility="no"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewOtherWasteRowBg"
+            app:srcCompat="@drawable/box_border_green" />
+
+        <ImageView
+            android:id="@+id/imageViewOrganicWasteIcon"
+            android:layout_width="49dp"
+            android:layout_height="55dp"
+            android:src="@drawable/organic"
+            android:contentDescription="Organic waste icon"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintStart_toStartOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/textViewOrganicWasteInfo"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textViewOrganicWasteInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical|start"
+            android:text="Organic Waste\n(Base Rate: 60 Taka/kg)"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintStart_toEndOf="@+id/imageViewOrganicWasteIcon"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextOrganicWastePricePerKg"/>
+
+        <EditText
+            android:id="@+id/editTextOrganicWastePricePerKg"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Rate"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintEnd_toStartOf="@+id/editTextOrganicWasteWeight"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOrganicWasteRowBg" />
+
+        <EditText
+            android:id="@+id/editTextOrganicWasteWeight"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/box_border"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:minHeight="40dp"
+            android:padding="7dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewOrganicWasteRowBg"
+            app:layout_constraintTop_toTopOf="@+id/imageViewOrganicWasteRowBg" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonCollect"
+            android:layout_width="254dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/box_green"
+            android:text="Collect"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewOrganicWasteRowBg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

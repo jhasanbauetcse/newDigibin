@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/softgreen"
+    tools:context=".adminpricelistupdate">
+
+    <!-- Header Section -->
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/imageView37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView34"
+        app:layout_constraintEnd_toEndOf="@+id/imageView34"
+        app:layout_constraintStart_toStartOf="@+id/imageView34"
+        app:layout_constraintTop_toTopOf="@+id/imageView34"
+        app:srcCompat="@drawable/adminpricelisttext" />
+
+    <!-- Text Views -->
+
+    <TextView
+        android:id="@+id/textbnook855"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:text="1.Text Book"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView34"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="2.News Paper"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook855"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="3.Carton Box"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="4.Soft Plastics"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook2"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="5.Hard Plastics"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook3"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="6.Fiber"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook4"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="7.CPU"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook5"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="8.Monitor"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook6"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="9.Tablet"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook7"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="10.Steel"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook8"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="11.Tin"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook9"
+        tools:textColor="@color/green" />
+
+    <TextView
+        android:id="@+id/textbnook12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="12.Aluminium"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textbnook855"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook10"
+        tools:textColor="@color/green" />
+
+    <!-- EditText Fields -->
+
+    <EditText
+        android:id="@+id/editTe85xtText"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook855" />
+
+    <EditText
+        android:id="@+id/editTe85xtText2"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook" />
+
+    <EditText
+        android:id="@+id/editTe85xtText3"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook2" />
+
+    <EditText
+        android:id="@+id/editTe85xtText4"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook3" />
+
+    <EditText
+        android:id="@+id/editTe85xtText5"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook4" />
+
+    <EditText
+        android:id="@+id/editTe85xtText6"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook5" />
+
+    <EditText
+        android:id="@+id/editTe85xtText7"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook6" />
+
+    <EditText
+        android:id="@+id/editTe85xtText8"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook7" />
+
+    <EditText
+        android:id="@+id/editTe85xtText9"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook8" />
+
+    <EditText
+        android:id="@+id/editTe85xtText10"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook9" />
+
+    <EditText
+        android:id="@+id/editTe85xtText11"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook10" />
+
+    <EditText
+        android:id="@+id/editTe85xtText12"
+        android:layout_width="75dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="28dp"
+        android:background="@drawable/box_border"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="price"
+        android:inputType="text"
+        android:padding="7dp"
+        android:textColorHint="@color/green"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textbnook12" />
+
+    <!-- Update Button -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button3788555"
+        android:layout_width="254dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/box_green"
+        android:text="Update"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textbnook12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

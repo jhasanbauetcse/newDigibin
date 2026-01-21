@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DigiBin</string>
+    <string name="customer">Customer</string>
+    <string name="collector">Collector</string>
+    <string name="Admin">Admin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="scroll_view_description">Scroll to see the content</string>
+    <string name="collection_status">Collection Status</string>
+</resources>

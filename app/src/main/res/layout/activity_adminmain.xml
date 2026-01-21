@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/adminMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/softgreen"
+    tools:context=".adminmain">
+
+    <!-- Header Section -->
+    <ImageView
+        android:id="@+id/headerImage23"
+        android:layout_width="match_parent"
+        android:layout_height="97dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/box_green" />
+
+    <!-- Logo and Title -->
+    <ImageView
+        android:id="@+id/logoImage24"
+        android:layout_width="77dp"
+        android:layout_height="67dp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerImage23"
+        app:layout_constraintEnd_toEndOf="@+id/headerImage23"
+        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintStart_toStartOf="@+id/headerImage23"
+        app:layout_constraintTop_toTopOf="@+id/headerImage23"
+        app:srcCompat="@drawable/mylogo" />
+
+    <ImageView
+        android:id="@+id/digiBinLogoImage25"
+        android:layout_width="142dp"
+        android:layout_height="59dp"
+        app:layout_constraintBottom_toBottomOf="@+id/headerImage23"
+        app:layout_constraintEnd_toEndOf="@+id/headerImage23"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toEndOf="@+id/logoImage24"
+        app:layout_constraintTop_toTopOf="@+id/headerImage23"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/colldigibin" />
+
+    <!-- Main Menu Buttons -->
+
+    <!-- Collection Request Button (Left) -->
+    <ImageView
+        android:id="@+id/requestAdminImage28"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="Collection requests"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerImage23"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/requestIcon29"
+        android:layout_width="51dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="@+id/requestAdminImage28"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="@+id/requestAdminImage28"
+        app:layout_constraintTop_toTopOf="@+id/requestAdminImage28"
+        app:srcCompat="@drawable/adminrequest" />
+
+    <TextView
+        android:id="@+id/collectionRequestText210"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Collection\nRequest"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/requestAdminImage28"
+        app:layout_constraintEnd_toEndOf="@+id/requestAdminImage28"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/requestAdminImage28"
+        app:layout_constraintTop_toTopOf="@+id/requestAdminImage28"
+        app:layout_constraintVertical_bias="0.811" />
+
+    <!-- Total Collection Button (Right) -->
+    <ImageView
+        android:id="@+id/requestAdminImage"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="Total collections"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/requestAdminImage28"
+        app:layout_constraintTop_toBottomOf="@+id/headerImage23"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/imageView99"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView46"
+        app:layout_constraintEnd_toEndOf="@+id/requestAdminImage"
+        app:layout_constraintStart_toStartOf="@+id/requestAdminImage"
+        app:layout_constraintTop_toTopOf="@+id/requestAdminImage"
+        app:layout_constraintVertical_bias="0.032"
+        app:srcCompat="@drawable/total" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="97dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Total\nCollection"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/requestAdminImage"
+        app:layout_constraintEnd_toEndOf="@+id/requestAdminImage"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/requestAdminImage" />
+
+    <!-- Bottom Row Buttons -->
+
+    <!-- Profile Button -->
+    <ImageView
+        android:id="@+id/profileAdminImage213"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundImage258"
+        app:layout_constraintStart_toStartOf="@+id/requestAdminImage28"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/userIcon217"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/profileText278"
+        app:layout_constraintEnd_toEndOf="@+id/profileAdminImage213"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/profileAdminImage213"
+        app:layout_constraintTop_toTopOf="@+id/profileAdminImage213"
+        app:layout_constraintVertical_bias="0.518"
+        app:srcCompat="@drawable/adminuser3" />
+
+    <TextView
+        android:id="@+id/profileText278"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="serif"
+        android:text="Profile"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/profileAdminImage213"
+        app:layout_constraintEnd_toEndOf="@+id/profileAdminImage213"
+        app:layout_constraintStart_toStartOf="@+id/profileAdminImage213" />
+
+    <!-- Price List Button -->
+    <ImageView
+        android:id="@+id/priceListAdminImage26"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundImage258"
+        app:layout_constraintEnd_toStartOf="@+id/logoutAdminImage214"
+        app:layout_constraintStart_toEndOf="@+id/profileAdminImage213"
+        app:layout_constraintTop_toBottomOf="@+id/headerImage23"
+        app:layout_constraintVertical_bias="0.753"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/priceListIcon28"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/priceListAdminImage26"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="@+id/priceListAdminImage26"
+        app:layout_constraintTop_toTopOf="@+id/priceListAdminImage26"
+        app:srcCompat="@drawable/adminpricelist12" />
+
+    <TextView
+        android:id="@+id/priceListUpdateText27"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="serif"
+        android:gravity="center"
+        android:text="Price List\nUpdate"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/priceListAdminImage26"
+        app:layout_constraintEnd_toEndOf="@+id/priceListIcon28"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="@+id/priceListIcon28"
+        app:layout_constraintTop_toBottomOf="@+id/priceListIcon28"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Logout Button -->
+    <ImageView
+        android:id="@+id/logoutAdminImage214"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundImage258"
+        app:layout_constraintEnd_toEndOf="@+id/requestAdminImage"
+        app:srcCompat="@drawable/box_green" />
+
+    <ImageView
+        android:id="@+id/logoutIcon215"
+        android:layout_width="39dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/logoutAdminImage214"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="@+id/logoutAdminImage214"
+        app:layout_constraintTop_toTopOf="@+id/logoutAdminImage214"
+        app:srcCompat="@drawable/adminlogout" />
+
+    <TextView
+        android:id="@+id/logoutText216"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/logoutAdminImage214"
+        app:layout_constraintEnd_toEndOf="@+id/logoutAdminImage214"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/logoutAdminImage214"
+        app:layout_constraintTop_toBottomOf="@+id/logoutIcon215"
+        app:layout_constraintVertical_bias="0.297" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage258"
+        android:layout_width="559dp"
+        android:layout_height="260dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/adminpic" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

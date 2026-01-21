@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/softgreen"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Fragment.ProfileFragment"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/profileImageViewUserIconBg"
+            android:layout_width="89dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/profileellipse"
+            android:contentDescription="Profile icon background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/profileImageViewUserIcon"
+            android:layout_width="70dp"
+            android:layout_height="65dp"
+            android:background="@drawable/man"
+            android:contentDescription="User profile icon"
+            app:layout_constraintBottom_toBottomOf="@+id/profileImageViewUserIconBg"
+            app:layout_constraintEnd_toEndOf="@+id/profileImageViewUserIconBg"
+            app:layout_constraintStart_toStartOf="@+id/profileImageViewUserIconBg"
+            app:layout_constraintTop_toTopOf="@+id/profileImageViewUserIconBg" />
+
+        <TextView
+            android:id="@+id/profileTextViewUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="  "
+            android:textColor="@color/green"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/profileImageViewUserIconBg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profileTextViewUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="  "
+            android:textColor="@color/green"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/profileTextViewUserName"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/profileTextViewUserName"
+            app:layout_constraintTop_toBottomOf="@+id/profileTextViewUserName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButtonHome"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/box_border_green"
+            android:drawableStart="@drawable/home"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Home"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileImageViewUserIconBg" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButtonSupport"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginRight="10dp"
+            android:background="@drawable/box_border_green"
+            android:drawableStart="@drawable/support1"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Support"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileButtonHome" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButtonDeveloper"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginRight="10dp"
+            android:background="@drawable/box_border_green"
+            android:drawableStart="@drawable/devloper"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Developer"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/feedback" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButtonShareApp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginRight="10dp"
+            android:background="@drawable/box_border_green"
+            android:drawableStart="@drawable/shared"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Share App"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileButtonDeveloper" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/feedback"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+
+            android:layout_marginRight="10dp"
+            android:background="@drawable/box_border_green"
+            android:drawableStart="@drawable/rszfeedback"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Feedback"
+            android:textAllCaps="false"
+            android:textColor="@color/green"
+
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileButtonSupport" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButtonLogOut"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/box_green"
+            android:drawablePadding="16dp"
+            android:gravity="start|center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="16dp"
+            android:text="Log Out"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileButtonShareApp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileButtonLogOut"
+            app:layout_constraintVertical_bias="0.503" />
+
+        <!-- If you need bottom spacing, you can add paddingBottom to the ConstraintLayout
+             or add a Space view at the bottom constrained to profileButtonLogOut -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

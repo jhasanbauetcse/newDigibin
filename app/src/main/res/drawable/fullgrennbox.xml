@@ -1,0 +1,7 @@
+<!-- res/drawable/green_box.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Solid green background -->
+    <solid android:color="#00ab41" /> <!-- Material Green 500 -->
+</shape>

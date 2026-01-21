@@ -1,0 +1,6 @@
+<!-- res/drawable/box_border_green.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/>  <!-- White background -->
+    <stroke android:color="#008000" android:width="3dp"/>  <!-- Green border -->
+    <corners android:radius="8dp"/>  <!-- Rounded corners -->
+</shape>

@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/softgreen">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp"
+        tools:context=".Fragment.pricelistFragment">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="44dp"
+            app:layout_constraintTop_toBottomOf="@+id/metals_h_scroll"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/header_box"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/box_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"/>
+
+        <TextView
+            android:id="@+id/header_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paid by Digibin Team"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/header_box"
+            app:layout_constraintEnd_toEndOf="@+id/header_box"
+            app:layout_constraintStart_toStartOf="@+id/header_box"
+            app:layout_constraintTop_toTopOf="@+id/header_box" />
+
+        <TextView
+            android:id="@+id/paper_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Paper"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_box" />
+
+        <HorizontalScrollView
+            android:id="@+id/paper_h_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="32dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paper_label">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/paper_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/paper_box_1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/paper_icon_1"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/textbook1"
+                    app:layout_constraintBottom_toTopOf="@+id/paper_price_1"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_1"
+                    app:layout_constraintTop_toTopOf="@+id/paper_box_1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/paper_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Text Book\n৳15/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/paper_box_1"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_1"
+                    app:layout_constraintTop_toBottomOf="@+id/paper_icon_1" />
+
+                <ImageView
+                    android:id="@+id/paper_box_2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toEndOf="@+id/paper_box_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/paper_icon_2"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/newspaper"
+                    app:layout_constraintBottom_toTopOf="@+id/paper_price_2"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_2"
+                    app:layout_constraintTop_toTopOf="@+id/paper_box_2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/paper_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="News Paper\n৳16/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/paper_box_2"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_2"
+                    app:layout_constraintTop_toBottomOf="@+id/paper_icon_2" />
+
+                <ImageView
+                    android:id="@+id/paper_box_3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/paper_box_2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/paper_icon_3"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cartonbox"
+                    app:layout_constraintBottom_toTopOf="@+id/paper_price_3"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_3"
+                    app:layout_constraintTop_toTopOf="@+id/paper_box_3"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/paper_price_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Carton Box\n৳8 /Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/paper_box_3"
+                    app:layout_constraintEnd_toEndOf="@+id/paper_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/paper_box_3"
+                    app:layout_constraintTop_toBottomOf="@+id/paper_icon_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/plastic_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Plastic"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paper_h_scroll" />
+
+        <HorizontalScrollView
+            android:id="@+id/plastic_h_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="32dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plastic_label">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/plastic_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/plastic_box_1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/plastic_icon_1"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/softplastic"
+                    app:layout_constraintBottom_toTopOf="@+id/plastic_price_1"
+                    app:layout_constraintEnd_toEndOf="@+id/plastic_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/plastic_box_1"
+                    app:layout_constraintTop_toTopOf="@+id/plastic_box_1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/plastic_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Soft Plastics\n৳8/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/plastic_box_1"
+                    app:layout_constraintEnd_toEndOf="@+id/plastic_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/plastic_box_1"
+                    app:layout_constraintTop_toBottomOf="@+id/plastic_icon_1" />
+
+                <ImageView
+                    android:id="@+id/plastic_box_2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/plastic_box_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/plastic_icon_2"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/hardplastic"
+                    app:layout_constraintBottom_toTopOf="@+id/plastic_price_2"
+                    app:layout_constraintEnd_toEndOf="@+id/plastic_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/plastic_box_2"
+                    app:layout_constraintTop_toTopOf="@+id/plastic_box_2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/plastic_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Hard Plastics\n৳8/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/plastic_box_2"
+                    app:layout_constraintEnd_toEndOf="@+id/plastic_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/plastic_box_2"
+                    app:layout_constraintTop_toBottomOf="@+id/plastic_icon_2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/ewaste_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="E waste"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/plastic_h_scroll" />
+
+        <HorizontalScrollView
+            android:id="@+id/ewaste_h_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="32dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ewaste_label">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ewaste_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ewaste_box_1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ewaste_icon_1"
+                    android:layout_width="52dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/cpu"
+                    app:layout_constraintBottom_toTopOf="@+id/ewaste_price_1"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_1"
+                    app:layout_constraintTop_toTopOf="@+id/ewaste_box_1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/ewaste_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="CPU\n৳105/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ewaste_box_1"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_1"
+                    app:layout_constraintTop_toBottomOf="@+id/ewaste_icon_1" />
+
+                <ImageView
+                    android:id="@+id/ewaste_box_2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toEndOf="@+id/ewaste_box_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ewaste_icon_2"
+                    android:layout_width="50dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/monitor"
+                    app:layout_constraintBottom_toTopOf="@+id/ewaste_price_2"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_2"
+                    app:layout_constraintTop_toTopOf="@+id/ewaste_box_2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/ewaste_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Monitor\n৳20/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ewaste_box_2"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_2"
+                    app:layout_constraintTop_toBottomOf="@+id/ewaste_icon_2" />
+
+                <ImageView
+                    android:id="@+id/ewaste_box_3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ewaste_box_2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ewaste_icon_3"
+                    android:layout_width="50dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/tablet"
+                    app:layout_constraintBottom_toTopOf="@+id/ewaste_price_3"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_3"
+                    app:layout_constraintTop_toTopOf="@+id/ewaste_box_3"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/ewaste_price_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tablet\n৳20/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/ewaste_box_3"
+                    app:layout_constraintEnd_toEndOf="@+id/ewaste_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/ewaste_box_3"
+                    app:layout_constraintTop_toBottomOf="@+id/ewaste_icon_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/metals_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:text="Metals"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ewaste_h_scroll" />
+
+        <HorizontalScrollView
+            android:id="@+id/metals_h_scroll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="32dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/metals_label">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/metals_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/metals_box_1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/metals_icon_1"
+                    android:layout_width="50dp"
+                    android:layout_height="27dp"
+                    android:src="@drawable/steel"
+                    app:layout_constraintBottom_toTopOf="@+id/metals_price_1"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_1"
+                    app:layout_constraintTop_toTopOf="@+id/metals_box_1"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/metals_price_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Steel\n৳32/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/metals_box_1"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_1"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_1"
+                    app:layout_constraintTop_toBottomOf="@+id/metals_icon_1" />
+
+                <ImageView
+                    android:id="@+id/metals_box_2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintStart_toEndOf="@+id/metals_box_1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/metals_icon_2"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/tin"
+                    app:layout_constraintBottom_toTopOf="@+id/metals_price_2"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_2"
+                    app:layout_constraintTop_toTopOf="@+id/metals_box_2"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/metals_price_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Tin\n৳5/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/metals_box_2"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_2"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_2"
+                    app:layout_constraintTop_toBottomOf="@+id/metals_icon_2" />
+
+                <ImageView
+                    android:id="@+id/metals_box_3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="16dp"
+                    android:src="@drawable/box_border_green"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/metals_box_2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/metals_icon_3"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/aluminium"
+                    app:layout_constraintBottom_toTopOf="@+id/metals_price_3"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_3"
+                    app:layout_constraintTop_toTopOf="@+id/metals_box_3"
+                    app:layout_constraintVertical_bias="0.5" />
+
+                <TextView
+                    android:id="@+id/metals_price_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Aluminium\n৳90/Kg"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/metals_box_3"
+                    app:layout_constraintEnd_toEndOf="@+id/metals_box_3"
+                    app:layout_constraintStart_toStartOf="@+id/metals_box_3"
+                    app:layout_constraintTop_toBottomOf="@+id/metals_icon_3" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
